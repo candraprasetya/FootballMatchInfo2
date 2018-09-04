@@ -1,0 +1,155 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=9184, tid=0x0000000000001598
+#
+# JRE version:  (8.0_152-b02) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002b38800):  JavaThread "Unknown thread" [_thread_in_vm, id=5528, stack(0x0000000002a30000,0x0000000002b30000)]
+
+Stack: [0x0000000002a30000,0x0000000002b30000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002b38800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=5528, stack(0x0000000002a30000,0x0000000002b30000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 37888K, used 655K [0x00000000d6200000, 0x00000000d8c00000, 0x0000000100000000)
+  eden space 32768K, 2% used [0x00000000d6200000,0x00000000d62a3d80,0x00000000d8200000)
+  from space 5120K, 0% used [0x00000000d8700000,0x00000000d8700000,0x00000000d8c00000)
+  to   space 5120K, 0% used [0x00000000d8200000,0x00000000d8200000,0x00000000d8700000)
+ ParOldGen       total 86016K, used 0K [0x0000000082600000, 0x0000000087a00000, 0x00000000d6200000)
+  object space 86016K, 0% used [0x0000000082600000,0x0000000082600000,0x0000000087a00000)
+ Metaspace       used 772K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 73K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ff0000,0x00000000123e0000] byte_map_base: 0x0000000011bdd000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006f324970
+ Begin Bits: [0x0000000013080000, 0x0000000014fe8000)
+ End Bits:   [0x0000000014fe8000, 0x0000000016f50000)
+
+Polling page: 0x0000000001000000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002c30000, 0x0000000002ea0000, 0x0000000011c30000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.022 loading class java/lang/Short
+Event: 0.022 loading class java/lang/Short done
+Event: 0.022 loading class java/lang/Integer
+Event: 0.022 loading class java/lang/Integer done
+Event: 0.022 loading class java/lang/Long
+Event: 0.023 loading class java/lang/Long done
+Event: 0.023 loading class java/lang/NullPointerException
+Event: 0.023 loading class java/lang/NullPointerException done
+Event: 0.023 loading class java/lang/ArithmeticException
+Event: 0.023 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff779040000 - 0x00007ff779071000 	C:\Program Files\Android\Android Studio\jre\jre\bin\java.exe
+0x00007ff8221f0000 - 0x00007ff8223db000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff81f480000 - 0x00007ff81f533000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff81e5b0000 - 0x00007ff81e842000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8208b0000 - 0x00007ff820955000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff820040000 - 0x00007ff8200de000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff820140000 - 0x00007ff8201de000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff81f840000 - 0x00007ff81f962000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff81fdf0000 - 0x00007ff81ff87000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff81e540000 - 0x00007ff81e560000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff81f540000 - 0x00007ff81f569000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff81f130000 - 0x00007ff81f2ca000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff81f2d0000 - 0x00007ff81f370000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff81e8e0000 - 0x00007ff81e9da000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff808730000 - 0x00007ff8089aa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17744.1003_none_df3ec20f6bca9ee1\COMCTL32.dll
+0x00007ff820260000 - 0x00007ff820588000 	C:\WINDOWS\System32\combase.dll
+0x00007ff81e2c0000 - 0x00007ff81e33e000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff81f810000 - 0x00007ff81f83e000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006c3e0000 - 0x000000006c4b2000 	C:\Program Files\Android\Android Studio\jre\jre\bin\msvcr100.dll
+0x000000006eb60000 - 0x000000006f39f000 	C:\Program Files\Android\Android Studio\jre\jre\bin\server\jvm.dll
+0x00007ff821f20000 - 0x00007ff821f28000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8081c0000 - 0x00007ff8081e4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff81aeb0000 - 0x00007ff81aeb9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff815c00000 - 0x00007ff815c0a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8201f0000 - 0x00007ff82025e000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff80bd00000 - 0x00007ff80bd2d000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff81e560000 - 0x00007ff81e5ab000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff815b40000 - 0x00007ff815b4f000 	C:\Program Files\Android\Android Studio\jre\jre\bin\verify.dll
+0x00007ff815760000 - 0x00007ff815789000 	C:\Program Files\Android\Android Studio\jre\jre\bin\java.dll
+0x00007ff815740000 - 0x00007ff815756000 	C:\Program Files\Android\Android Studio\jre\jre\bin\zip.dll
+
+VM Arguments:
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -Xadd-compiler-builtins -Xbuild-file=C:\Users\candr\AppData\Local\Temp\kjps6261397750519124117app_debug.script.xml -classpath C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.2.61\bc77c34ff80df88b4d9b0418ea4ae758544573f3\kotlin-stdlib-jdk7-1.2.61.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha1.aar\2b53f77fcaec5cd1bbc7ffc219d0fd9d\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-bottomappbar-28.0.0-alpha1.aar\c7289d25d6d4d66050850b2a416dcd44\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-theme-28.0.0-alpha1.aar\50f87a32d6f2bcb445b54b0e5bfe1d35\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-transformation-28.0.0-alpha1.aar\02e6d11239708196abf69c30f3b37186\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-widget-28.0.0-alpha1.aar\ad734c6cd7d3e272ef3dae979b7b99f1\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-bottomsheet-28.0.0-alpha1.aar\1d8af900d4f8fac862fd14bf97632a66\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-dialog-28.0.0-alpha1.aar\1b784a61f3ef398de38fbc056df9538b\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-button-28.0.0-alpha1.aar\76d547e7a9fe64b2ac9a403144806d97\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-card-28.0.0-alpha1.aar\3c7b3bcf514c81a90586168bac62cd11\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-chip-28.0.0-alpha1.aar\e9a96b0d1939dab8f50716cb35e43ca5\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-internal-28.0.0-alpha1.aar\0533dec2bdac9f9f105b6ed3d74a25df\jars\classes.jar;C:\Users\candr\.gradle\caches\transforms-1\files-1.1\design-bottomnavigation-28.0.0-alpha1.aar\8e8efc8d3bba2214a8e6606fcf0bddbf\jars\classes.jar;C:\Users
+java_class_path (initial): C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.2.61\8f4812486d21943cea3f170d53537e628f7eef8c\kotlin-compiler-embeddable-1.2.61.jar;C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.2.61\6fd5bcfc9ffc446dd147ea006bee7ef5f0ad8ca4\kotlin-reflect-1.2.61.jar;C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.2.61\5bc44acc4b3f0d19166ae3e50454b41e8ff29335\kotlin-stdlib-1.2.61.jar;C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.2.61\75e4bfc103b71324be6fc862ce806d5399508a14\kotlin-script-runtime-1.2.61.jar;C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.2.61\772de03e12d932f489e41aef997d26c20a4ebee6\kotlin-stdlib-common-1.2.61.jar;C:\Users\candr\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Program Files\Android\Android Studio\jre\lib\tools.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\wamp64\bin\php\php7.2.4;e:\composer;E:\MinGW\bin;C:\Program Files\Git\cmd;C:\Users\candr\flutter\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\candr\AppData\Local\Microsoft\WindowsApps;C:\Users\candr\AppData\Roaming\Composer\vendor\bin;C:\Users\candr\AppData\Local\GitHubDesktop\bin;C:\Program Files\Bandizip\;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps
+USERNAME=candr
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17744 (10.0.17744.1001)
+
+CPU:total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8231632k(906876k free), swap 13863632k(8388k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b02) for windows-amd64 JRE (1.8.0_152-release-1024-b02), built by "builder" with MS VC++ 10.0 (VS2010)
+
+time: Tue Sep 04 08:31:36 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
